@@ -1,7 +1,10 @@
+const path = require('path');
+
 module.exports = {
   stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   /** Expose public folder to storybook as static */
   staticDirs: ['../public'],
+
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -21,6 +24,14 @@ module.exports = {
       },
     },
   ],
+  webpackFinal: async (config, { configType }) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+    });
+
+    return config;
+  },
   framework: '@storybook/react',
   core: {
     builder: '@storybook/builder-webpack5',
