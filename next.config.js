@@ -5,8 +5,8 @@ const nextConfig = {
     domains: ['i.pravatar.cc'],
   },
   i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'en',
+    locales: ['ja', 'fr'],
+    defaultLocale: 'ja',
     // localeDetection: false,
   },
 };

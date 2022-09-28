@@ -22,10 +22,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.13.1",
+    "google-map-react": "^2.2.0",
     "gsap": "^3.11.1",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-social-icons": "^5.14.0",
     "sass": "^1.55.0",
     "scss": "^0.2.4"
   },

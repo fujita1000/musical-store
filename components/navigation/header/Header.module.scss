@@ -1,0 +1,142 @@
+.container {
+  width: 100%;
+}
+.nav{
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  text-align: center;
+  color: white;  
+  visibility:hidden;
+  z-index: 999;
+}
+.navbar_con{
+  width: 50px;
+  height: 100px;
+  position: fixed;
+  top: 20px;
+  right: 50px;
+    z-index: 999;
+}
+.navbar1{
+  width: 50px;
+  border: solid 1.5px rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);
+  margin: 15px;
+}
+.navbar2{
+  width: 50px;
+  width: 50px;
+  border: solid 1.5px rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);
+  width: 50px;
+  margin: 15px;
+}
+.navbar3{
+  width: 50px;
+  border: solid 1.5px rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);
+  margin: 15px;
+}
+.navbar_con2{
+  width: 50px;
+  height: 100px;
+  position: fixed;
+  top: 40px;
+  right: 50px;
+  visibility:hidden;
+    z-index: 9999;
+}
+.navbar4{
+  position: absolute;
+  width: 50px;
+  border: solid 1.5px #fff;
+  background-color: rgb(255, 255, 255);
+  margin: 15px;
+  transform: rotate(45deg)
+}
+.navbar5{
+  position: absolute;
+  width: 50px;
+  border: solid 1.5px #fff;
+  background-color: rgb(255, 255, 255);
+  margin: 15px;
+  transform: rotate(135deg);
+}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 900px) {}
+.nav{
+  font-size: 40px;
+}
+@media only screen and (max-width: 600px) {
+.nav{
+  font-size: 40px;
+}
+}
+
+@media only screen and (max-width: 475px) {
+
+.nav{
+  font-size: 30px;
+}
+.navbar_con{
+  width: 50px;
+  height: 100px;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+}
+.navbar1{
+  width: 40px;
+  border: solid 1.5px;
+  background-color: black;
+  margin: 10px;
+}
+.navbar2{
+  width: 40px;
+  border: solid 1.5px;
+  background-color: black;
+  margin: 10px;
+}
+.navbar3{
+  width: 40px;
+  border: solid 1.5px;
+  background-color: black;
+  margin: 10px;
+}
+.navbar_con2{
+  width: 50px;
+  height: 100px;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  visibility:hidden;
+}
+.navbar4{
+  position: absolute;
+  width: 40px;
+  border: solid 1.5px #fff;
+  background-color: rgb(255, 255, 255);
+  margin: 15px;
+  transform: rotate(45deg)
+}
+.navbar5{
+  position: absolute;
+  width: 40px;
+  border: solid 1.5px #fff;
+  background-color: rgb(255, 255, 255);
+  margin: 15px;
+  transform: rotate(135deg);
+}
+}
+
+
+
+

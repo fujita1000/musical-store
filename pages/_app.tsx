@@ -1,17 +1,15 @@
-import type { AppProps } from 'next/app';
-import { AuthProvider } from '../state/auth/AuthContext';
 import './globals.css';
-import { NextPageWithLayout } from './page';
+import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 
-interface AppPropsWithLayout extends AppProps {
-  Component: NextPageWithLayout;
-}
-
-function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+function MyApp({ Component, pageProps }) {
   // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout || ((page) => page);
-
-  return <AuthProvider>{getLayout(<Component {...pageProps} />)}</AuthProvider>;
+  return (
+    <>
+      <PrimaryLayout>
+        <Component {...pageProps} />
+      </PrimaryLayout>
+    </>
+  );
 }
 
 export default MyApp;
