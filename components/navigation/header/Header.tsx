@@ -1,6 +1,7 @@
 import style from "./Header.module.scss";
 import {gsap} from "gsap"
 import { useEffect } from "react";
+import Link from "next/link";
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {}
 
@@ -12,6 +13,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
     const nav = document.querySelector('#nav');
     const playButton = document.querySelector('#play');
     const reverseButton = document.querySelector('#reverse');
+    const close = document.querySelector('#text');
 
   playButton.addEventListener('click', () => {
     tl.to(nav, { visibility: 'visible' })
@@ -27,19 +29,50 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
       tl.play();
     });
 
+    close.addEventListener('click', () => {
+      tl.to(nav, { visibility: 'hidden' })
+      .to(reverseButton, { visibility: 'hidden' }, '<')
+      .to(playButton, { visibility: 'visible' }, '<');
+      tl.play();
+    })
+
  }, []);
   return (
     <header {...headerProps} className={`${className}`}>
       <div className={style.container}>
         <div className={style.nav} id="nav">
-          <nav>
+          <nav id="text">
             <ol>
-              <li>HOME</li>
-              <li>当店について</li>
-              <li>販売中の製品</li>
-              <li>お知らせ</li>
-              <li>お問い合わせ</li>
-              <li>アクセス</li>
+              <Link href="#home">
+                <a>
+                  <li>HOME</li>
+                </a>
+              </Link>
+              <Link href="#aboutme">
+                <a>
+                  <li>当店について</li>
+                </a>
+              </Link>
+              <Link href="#lineup">
+                <a>
+                  <li>販売中の製品</li>
+                </a>
+              </Link>
+              <Link href="#news">
+                <a>
+                  <li>お知らせ</li>
+                </a>
+              </Link>
+              <Link href="#contact">
+                <a>
+                  <li>お問い合わせ</li>
+                </a>
+              </Link>
+              <Link href="#access">
+                <a>
+                  <li>アクセス</li>
+                </a>
+              </Link>
             </ol>
           </nav>
         </div>

@@ -25,7 +25,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <div className={style.container}>
       <main className={style.main}>
-        <div className={style.home}>
+        <div className={style.home} id="home">
           <div className={style.logo}>
             <Image src={'/logo.png'} width={180} height={180} alt="logo" />
           </div>
@@ -53,7 +53,7 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
 
-        <div className={style.aboutme}>
+        <div className={style.aboutme} id="aboutme">
           <div className={style.about_box}>
             <h2>ABOUT ME</h2>
             <h3>Sense of Pitchについて</h3>
@@ -76,7 +76,7 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
 
-        <div className={style.lineup}>
+        <div className={style.lineup} id="lineup">
           <div className={style.lineup_con}>
             <h2>LINE UP</h2>
             <h3>販売中の製品</h3>
@@ -158,7 +158,7 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
 
-        <div className={style.news}>
+        <div className={style.news} id="news">
           <div className={style.news_con}>
             <div className={style.news_img}>
               <Image
@@ -198,7 +198,7 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
 
-        <div className={style.contact}>
+        <div className={style.contact} id="contact">
           <div className={style.con_box1}></div>
           <div className={style.con_box2}></div>
           <div className={style.con_container}>
@@ -229,7 +229,8 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
         </div>
-        <div className={style.access}>
+
+        <div className={style.access} id="access">
           <div  className={style.access_con}>
             <h2>ACCESS</h2>
             <h3>アクセス</h3>
