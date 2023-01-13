@@ -1,6 +1,5 @@
 import style from './style.module.scss';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
-import { NextPageWithLayout } from './page';
 import Image from "next/image";
 import React from 'react';
 import { GoogleMap, LoadScriptNext, GroundOverlay } from '@react-google-maps/api';
@@ -21,7 +20,7 @@ const bounds = {
   west: 141.4666,
 };
 
-const Home: NextPageWithLayout = () => {
+const Home= () => {
   return (
     <div className={style.container}>
       <main className={style.main}>
